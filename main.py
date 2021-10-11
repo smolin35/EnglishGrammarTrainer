@@ -4,7 +4,7 @@ import sys
 class IVerbs:
     def guess(self):
         print('# List irregulars verbs #')
-        with open('verbs.json') as json_file:
+        with open('dict/verbs_rus.json') as json_file:
             verbs = json.load(json_file)
 
         successList = []

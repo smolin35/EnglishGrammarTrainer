@@ -1,0 +1,227 @@
+{
+  "cost":{
+	  "past": "cost",
+	  "participle": "cost",
+	  "translation": "стоить"
+  },
+  "cut":{
+	  "past": "cut",
+	  "participle": "cut",
+	  "translation": "резать, стричь"
+  },
+  "hit":{
+	  "past": "hit",
+	  "participle": "hit",
+	  "translation": "ударять, поражать"
+  },
+  "hurt":{
+	  "past": "hurt",
+	  "participle": "hurt",
+	  "translation": "ранить, причинять вред"
+  },
+  "let":{
+	  "past": "let",
+	  "participle": "let",
+	  "translation": "допускать, давать возможность"
+  },
+  "put":{
+	  "past": "put",
+	  "participle": "put",
+	  "translation": "класть, положить"
+  },
+  "set":{
+	  "past": "set",
+	  "participle": "set",
+	  "translation": "размещать, класть, устанавливать"
+  },
+  "shut":{
+	  "past": "shut",
+	  "participle": "shut",
+	  "translation": "закрывать(ся), складывать"
+  },
+  "bend":{
+	  "past": "bent",
+	  "participle": "bent",
+	  "translation": "сгибаться, подчиняться"
+  },
+  "bring":{
+	  "past": "brought",
+	  "participle": "brought",
+	  "translation": "приносить"
+  },
+  "build":{
+	  "past": "built",
+	  "participle": "built",
+	  "translation": "строить"
+  },
+  "burn":{
+	  "past": "burnt",
+	  "participle": "burnt",
+	  "translation": "гореть"
+  },
+  "buy":{
+	  "past": "bought",
+	  "participle": "bought",
+	  "translation": "покупать, выкупать"
+  },
+  "catch":{
+	  "past": "caught",
+	  "participle": "caught",
+	  "translation": "ловить"
+  },
+  "dig":{
+	  "past": "dug",
+	  "participle": "dug",
+	  "translation": "копать, рыть"
+  },
+  "dream":{
+	  "past": "dreamt",
+	  "participle": "dreamt",
+	  "translation": "видеть сны"
+  },
+  "feed":{
+	  "past": "fed",
+	  "participle": "fed",
+	  "translation": "кормить, обеспечивать"
+  },
+  "feel":{
+	  "past": "felt",
+	  "participle": "felt",
+	  "translation": "чувствовать"
+  },
+  "find":{
+	  "past": "found",
+	  "participle": "found",
+	  "translation": "находить"
+  },
+  "get":{
+	  "past": "got",
+	  "participle": "got",
+	  "translation": "получать"
+  },
+  "have":{
+	  "past": "had",
+	  "participle": "had",
+	  "translation": "иметь"
+  },
+  "hear":{
+	  "past": "heard",
+	  "participle": "heard",
+	  "translation": "слышать"
+  },
+  "hold":{
+	  "past": "held",
+	  "participle": "held",
+	  "translation": "держать, удерживать, хранить"
+  },
+  "keep":{
+	  "past": "kept",
+	  "participle": "kwpt",
+	  "translation": "держать, хранить"
+  },
+  "lay":{
+	  "past": "laid",
+	  "participle": "laid",
+	  "translation": "класть, положить"
+  },
+  "learn":{
+	  "past": "learnt",
+	  "participle": "learnt",
+	  "translation": "учить"
+  },
+  "leave":{
+	  "past": "left",
+	  "participle": "left",
+	  "translation": "оставлять, покидать"
+  },
+  "lead":{
+	  "past": "led",
+	  "participle": "led",
+	  "translation": "вести, руководить"
+  },
+  "lend":{
+	  "past": "lent",
+	  "participle": "lent",
+	  "translation": "давать взаймы"
+  },
+  "lose":{
+	  "past": "lost",
+	  "participle": "lost",
+	  "translation": "терять, приспасабливаться?"
+  },
+  "make":{
+	  "past": "made",
+	  "participle": "made",
+	  "translation": "совершать, делать, заставлять"
+  },
+  "mean":{
+	  "past": "meant",
+	  "participle": "meant",
+	  "translation": "значить, подразумевать, иметь в виду"
+  },
+  "meet":{
+	  "past": "met",
+	  "participle": "met",
+	  "translation": "встречать"
+  },
+  "read":{
+	  "past": "read",
+	  "participle": "read",
+	  "translation": "читать"
+  },
+  "say":{
+	  "past": "said",
+	  "participle": "said",
+	  "translation": "говорить, сказать"
+  },
+  "sell":{
+	  "past": "sold",
+	  "participle": "sold",
+	  "translation": "продавать"
+  },
+  "send":{
+	  "past": "sent",
+	  "participle": "sent",
+	  "translation": "посылать, отправлять"
+  },
+  "shine":{
+	  "past": "shone",
+	  "participle": "shone",
+	  "translation": "светить(ся), освещать, блестеть"
+  },
+  "shoot":{
+	  "past": "shot",
+	  "participle": "shot",
+	  "translation": "стрелять, внезапно проявиться"
+  },
+  "sit":{
+	  "past": "sat",
+	  "participle": "sat",
+	  "translation": "сидеть, усаживать, рассаживать"
+  },
+  "sleep":{
+	  "past": "slept",
+	  "participle": "slept",
+	  "translation": "спать"
+  },
+  "slide":{
+	  "past": "slid",
+	  "participle": "slid",
+	  "translation": "скользить, подскользнуться"
+  },
+  "smell":{
+	  "past": "smelt",
+	  "participle": "smelt",
+	  "translation": "чувствовать запах, пахнуть"
+  },
+  "spend":{
+	  "past": "spent",
+	  "participle": "spent",
+	  "translation": "тратить, проводить время"
+  },
+  "":{
+	  "past": "",
+	  "participle": "",
+	  "translation": ""
+  }
+}  

@@ -1,0 +1,42 @@
+{
+  "adjective":{
+	  "verd": "",
+	  "adverb": "",
+	  "noun": "прилагательное",
+	  "pronoun": "",
+	  "adjective": "",
+	  "numerals": ""
+  },
+  "adverb":{
+	  "adjective": "",
+	  "verd": "",
+	  "adverb": "",
+	  "noun": "наречие",
+	  "pronoun": "",
+	  "numerals": ""
+  },
+  "pronoun":{
+	  "adjective": "",
+	  "verd": "",
+	  "adverb": "",
+	  "noun": "местоимение",
+	  "pronoun": "",
+	  "numerals": ""
+  },
+  "noun":{
+	  "adjective": "",
+	  "verd": "",
+	  "adverb": "",
+	  "noun": "существительное",
+	  "pronoun": "",
+	  "numerals": ""
+  },
+  "":{
+	  "adjective": "",
+	  "verd": "",
+	  "adverb": "",
+	  "noun": "",
+	  "pronoun": "",
+	  "numerals": ""
+  }
+}  
