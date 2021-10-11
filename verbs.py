@@ -1,38 +1,62 @@
 import json
 import random
+import sys
 class IVerbs:
     def guess(self):
-        print '# List irregulars verbs #'
+        print('# List irregulars verbs #')
         with open('verbs.json') as json_file:
             verbs = json.load(json_file)
+
+        successList = []
+
         totalVerbs = len(verbs) - 1
+        verbKeys = list(verbs.keys())
         continues = 1
         while(continues):
-            start = 0
             verbRandom = random.randint(0, totalVerbs)
-            for verb in verbs:
-                if verbRandom == start:
-                    print "\nVerb:", str(verb)
-                    inputPast = raw_input('Past: ')
-                    if (verbs[verb]['past'] == inputPast):
-                        print '\033[92m ok\033[0m'
-                    else:    
-                        print '\033[91m x\033[0m'
-                    pass
-                    inputPastParticiple = raw_input('Past Participles: ')
-                    if (verbs[verb]['participles'] == inputPastParticiple):
-                        print '\033[92m ok\033[0m'
-                    else:    
-                        print '\033[91m x\033[0m'
-                    pass
-                    print 'Verb: %s %s %s %s' % (verb, verbs[verb]['past'], verbs[verb]['participles'], verbs[verb]['translation'])
-                    print 'https://www.wordreference.com/es/translation.asp?tranword=%s' % (verb.strip())
-                start = start + 1
+            verb = verbKeys[verbRandom]
+            isSuccess = True
+            print(verbs[verb]['translation'])
+            if verb != "" and not verb in successList:
+                print("\nTranslation:", verbs[verb]['translation'])
+                inputPast = self.input('Infinitive:')
+                if (verb == inputPast):
+                    print('\033[92m ok\033[0m')
+                else:
+                    print('\033[91m x\033[0m')
+                    isSuccess = False
                 pass
-            # v = raw_input('Continue y or n: ')
-            # if v == 'n':
-            #     continues = 0
-            #     pass
-        print 'This\' the end'
+                inputPast = self.input('Past Simple:')
+                if (verbs[verb]['past'] == inputPast):
+                    print('\033[92m ok\033[0m')
+                else:
+                    print('\033[91m x\033[0m')
+                    isSuccess = False
+                pass
+                inputPastParticiple = self.input('Past Participle:')
+                if (verbs[verb]['participle'] == inputPastParticiple):
+                    print('\033[92m ok\033[0m')
+                else:
+                    print('\033[91m x\033[0m')
+                    isSuccess = False
+                if isSuccess == False:
+                    print('--->>>: {} {} {}'.format(verb, verbs[verb]['past'], verbs[verb]['participle']))
+                else:
+                    successList.append(verb)
+                    if len(successList) >= totalVerbs:
+                        print("")
+                        print("======== Congratulation! ========")
+                        print("And... Let's repeat it again =)")
+                        successList.clear()
+
+
+        print('This\' the end')
+
+    def input(self, label):
+        result = input(label+" ")
+        sys.stdout.write("\033[F")
+        print(label, result, end=' ...')
+        return result
+
 Verb = IVerbs()
 Verb.guess()
