@@ -16,33 +16,41 @@ class IVerbs:
             verbRandom = random.randint(0, totalVerbs)
             verb = verbKeys[verbRandom]
             isSuccess = True
-            print(verbs[verb]['translation'])
+            isSure = True
             if verb != "" and not verb in successList:
                 print("\nTranslation:", verbs[verb]['translation'])
-                inputPast = self.input('Infinitive:')
-                if (verb == inputPast):
+                inputVerb = self.input('Infinitive:')
+                isCorrect,isSure_ = self.check(inputVerb, verb)
+                if isCorrect:
                     print('\033[92m ok\033[0m')
                 else:
                     print('\033[91m x\033[0m')
                     isSuccess = False
-                pass
-                inputPast = self.input('Past Simple:')
-                if (verbs[verb]['past'] == inputPast):
+                isSure = (isSure_ if isSure else False)
+
+                inputVerb = self.input('Past Simple:')
+                isCorrect,isSure_ = self.check(inputVerb, verbs[verb]['past'])
+                if isCorrect:
                     print('\033[92m ok\033[0m')
                 else:
                     print('\033[91m x\033[0m')
                     isSuccess = False
-                pass
-                inputPastParticiple = self.input('Past Participle:')
-                if (verbs[verb]['participle'] == inputPastParticiple):
+                isSure = (isSure_ if isSure else False)
+
+                inputVerb = self.input('Past Participle:')
+                isCorrect,isSure_ = self.check(inputVerb, verbs[verb]['participle'])
+                if isCorrect:
                     print('\033[92m ok\033[0m')
                 else:
                     print('\033[91m x\033[0m')
                     isSuccess = False
+                isSure = (isSure_ if isSure else False)
+
                 if isSuccess == False:
                     print('--->>>: {} {} {}'.format(verb, verbs[verb]['past'], verbs[verb]['participle']))
                 else:
-                    successList.append(verb)
+                    if isSure:
+                        successList.append(verb)
                     if len(successList) >= totalVerbs:
                         print("")
                         print("======== Congratulation! ========")
@@ -57,6 +65,17 @@ class IVerbs:
         sys.stdout.write("\033[F")
         print(label, result, end=' ...')
         return result
+
+    def check(self, v, correct):
+        result = False
+        isSure = True
+        if len(v) > 1 and v[-1] == '?':
+            isSure = False
+            v = v[:-1]
+        if len(v)>1 and v == correct:
+            return True, isSure
+        else:
+            return False, isSure
 
 Verb = IVerbs()
 Verb.guess()
