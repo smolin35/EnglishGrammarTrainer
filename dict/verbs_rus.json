@@ -27,7 +27,7 @@
   "put":{
 	  "past": "put",
 	  "participle": "put",
-	  "translation": "класть, положить"
+	  "translation": "помещать, положить"
   },
   "set":{
 	  "past": "set",
@@ -116,7 +116,7 @@
   },
   "keep":{
 	  "past": "kept",
-	  "participle": "kwpt",
+	  "participle": "kept",
 	  "translation": "держать, хранить"
   },
   "lay":{
@@ -127,7 +127,7 @@
   "learn":{
 	  "past": "learnt",
 	  "participle": "learnt",
-	  "translation": "учить"
+	  "translation": "учить(изучать)"
   },
   "leave":{
 	  "past": "left",
@@ -218,6 +218,221 @@
 	  "past": "spent",
 	  "participle": "spent",
 	  "translation": "тратить, проводить время"
+  },
+  "stand":{
+	  "past": "stood",
+	  "participle": "stood",
+	  "translation": "стоять, быть расположенным"
+  },
+  "teach":{
+	  "past": "taught",
+	  "participle": "taught",
+	  "translation": "учить(передавать знания)"
+  },
+  "tell":{
+	  "past": "told",
+	  "participle": "told",
+	  "translation": "говорить, рассказывать"
+  },
+  "think":{
+	  "past": "thought",
+	  "participle": "thought",
+	  "translation": "думать"
+  },
+  "understand":{
+	  "past": "understood",
+	  "participle": "understood",
+	  "translation": "понимать"
+  },
+  "win":{
+	  "past": "won",
+	  "participle": "won",
+	  "translation": "победить, добиться"
+  },
+  "become":{
+	  "past": "became",
+	  "participle": "become",
+	  "translation": "становиться"
+  },
+  "come":{
+	  "past": "came",
+	  "participle": "come",
+	  "translation": "приходить, приезжать"
+  },
+  "run":{
+	  "past": "ran",
+	  "participle": "run",
+	  "translation": "бежать"
+  },
+  "beat":{
+	  "past": "beat",
+	  "participle": "beaten",
+	  "translation": "бить, колотить"
+  },
+  "be":{
+	  "past": "was, were",
+	  "participle": "been",
+	  "translation": "быть, иметь место"
+  },
+  "begin":{
+	  "past": "began",
+	  "participle": "begun",
+	  "translation": "начинаться"
+  },
+  "bite":{
+	  "past": "bit",
+	  "participle": "bitten",
+	  "translation": "кусать(ся)"
+  },
+  "blow":{
+	  "past": "blew",
+	  "participle": "blown",
+	  "translation": "дуть"
+  },
+  "break":{
+	  "past": "broke",
+	  "participle": "broken",
+	  "translation": "ломать, разрушать"
+  },
+  "choose":{
+	  "past": "chose",
+	  "participle": "chosen",
+	  "translation": "выбирать"
+  },
+  "do":{
+	  "past": "did",
+	  "participle": "done",
+	  "translation": "делать"
+  },
+  "draw":{
+	  "past": "drew",
+	  "participle": "drawn",
+	  "translation": "рисовать"
+  },
+  "drink":{
+	  "past": "drank",
+	  "participle": "drunk",
+	  "translation": "пить"
+  },
+  "drive":{
+	  "past": "drove",
+	  "participle": "driven",
+	  "translation": "везти, управлять автомобилем"
+  },
+  "eat":{
+	  "past": "ate",
+	  "participle": "eaten",
+	  "translation": "есть, разъедать, разрушать"
+  },
+  "fall":{
+	  "past": "fell",
+	  "participle": "fallen",
+	  "translation": "падать"
+  },
+  "fly":{
+	  "past": "flew",
+	  "participle": "flown",
+	  "translation": "летать, разлетаться(переносное \"разлетаются мысли\")"
+  },
+  "forget":{
+	  "past": "forgot",
+	  "participle": "forgotten",
+	  "translation": "забыть, пренебрегать, игнорировать"
+  },
+  "freez":{
+	  "past": "froze",
+	  "participle": "frozen",
+	  "translation": "замерзать, застывать"
+  },
+  "give":{
+	  "past": "gave",
+	  "participle": "given",
+	  "translation": ""
+  },
+  "go":{
+	  "past": "went",
+	  "participle": "gone",
+	  "translation": "идти, ходить, ехать (перемещаться в общем)"
+  },
+  "hide":{
+	  "past": "hid",
+	  "participle": "hidden",
+	  "translation": "прятать(ся), скрывать(ся)"
+  },
+  "know":{
+	  "past": "knew",
+	  "participle": "known",
+	  "translation": "знать"
+  },
+  "lie":{
+	  "past": "lay",
+	  "participle": "lain",
+	  "translation": "лежать, быть расположденным, простираться"
+  },
+  "ride":{
+	  "past": "rode",
+	  "participle": "ridden",
+	  "translation": "ехать(на транспорте, верхом)"
+  },
+  "ring":{
+	  "past": "rang",
+	  "participle": "rung",
+	  "translation": "звенеть, звонить, слышаться"
+  },
+  "see":{
+	  "past": "saw",
+	  "participle": "seen",
+	  "translation": "видеть, наблюдать"
+  },
+  "shake":{
+	  "past": "shook",
+	  "participle": "shaken",
+	  "translation": "трясти(сь), качаться, коллебаться"
+  },
+  "sing":{
+	  "past": "sang",
+	  "participle": "sung",
+	  "translation": "петь"
+  },
+  "speak":{
+	  "past": "spoke",
+	  "participle": "spoken",
+	  "translation": "говорить, выражать свою мысль"
+  },
+  "steal":{
+	  "past": "stole",
+	  "participle": "stolen",
+	  "translation": "красть"
+  },
+  "swim":{
+	  "past": "swam",
+	  "participle": "swum",
+	  "translation": "плавать"
+  },
+  "take":{
+	  "past": "took",
+	  "participle": "taken",
+	  "translation": "брать, хватать, захватывать"
+  },
+  "tear":{
+	  "past": "tore",
+	  "participle": "torn",
+	  "translation": "рваться(ся), разрывать(ся)"
+  },
+  "throw":{
+	  "past": "threw",
+	  "participle": "thrown",
+	  "translation": "бросать, кидать"
+  },
+  "wear":{
+	  "past": "wore",
+	  "participle": "worn",
+	  "translation": "носить"
+  },
+  "write":{
+	  "past": "wrote",
+	  "participle": "written",
+	  "translation": "писать"
   },
   "":{
 	  "past": "",
