@@ -339,7 +339,7 @@
 	  "participle": "forgotten",
 	  "translation": "забыть, пренебрегать, игнорировать"
   },
-  "freez":{
+  "freeze":{
 	  "past": "froze",
 	  "participle": "frozen",
 	  "translation": "замерзать, застывать"
@@ -347,7 +347,7 @@
   "give":{
 	  "past": "gave",
 	  "participle": "given",
-	  "translation": ""
+	  "translation": "давать, дарить, предлагать"
   },
   "go":{
 	  "past": "went",
