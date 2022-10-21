@@ -5,6 +5,10 @@ __pycache__/
 
 # files with progress in the study of the dictionary
 *.promotion
+# temprary dictionari file
+*.json~
+# temprary vim file
+*.swp
 
 # C extensions
 *.so
