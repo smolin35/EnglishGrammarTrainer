@@ -1,73 +1,130 @@
 import json
 import random
 import sys
+import os
+import numpy as np
+import csv
 
-class IVerbs:
-    def guess(self):
-        print('# List irregulars verbs #')
-        #with open('dict/verbs_test.json') as json_file:
+__PROMOTION_NUM = 4
 
-        with open(sys.argv[1]) as json_file:
-            words = json.load(json_file)
+def __input(label):
+    result = input(label+" ")
+    sys.stdout.write("\033[F")
+    print(label, result, end=' ...')
+    return result
 
-        successList = []
+def check(v, correct):
+    result = False
+    isSure = True
+    if len(v) > 1 and v[-1] == '?':
+        isSure = False
+        v = v[:-1]
+    if len(v)>1 and v == correct:
+        return True, isSure
+    else:
+        return False, isSure
 
-        totalWords = len(words) - 1
-        wordsKeys = list(words.keys())
-        continues = 1
-        isOneTimeRepeat = False
-        while(continues):
-            if isOneTimeRepeat == False:
-                wordRandom = random.randint(0, totalWords)
-            word = wordsKeys[wordRandom]
-            isSuccess = True
-            isSure = True
-            if word != "" and not word in successList:
-                print(f'\n{word} :')
-                for k in words[word].keys():
-                    inputWorld = self.input(f'  {k}:')
-                    isCorrect,isSure_ = self.check(inputWorld, words[word][k])
-                    if isCorrect:
-                        print('\033[92m ok\033[0m')
-                    else:
-                        print('\033[91m x\033[0m')
-                        isSuccess = False
-                    isSure = (isSure_ if isSure else False)
 
-                if isSuccess == False:
-                    print('\033[33m--->>>\033[0m: ', end='')
-                    for k in words[word].keys():
-                        print({words[word][k]})
-                    isOneTimeRepeat = True
-                else:
-                    if isSure and isOneTimeRepeat == False:
-                        successList.append(word)
-                    isOneTimeRepeat = False
+#with open('dict/verbs_test.json') as json_file:
 
-                    if len(successList) >= totalWords:
-                        print("")
-                        print("======== Congratulation! ========")
-                        print("And... Let's repeat it again =)")
-                        successList.clear()
+if len(sys.argv) != 2:
+    print('Укажите путь до словаря')
+    quit()
 
-        print('This\' the end')
+dictPath = sys.argv[1]
 
-    def input(self, label):
-        result = input(label+" ")
-        sys.stdout.write("\033[F")
-        print(label, result, end=' ...')
-        return result
+level = 9999
 
-    def check(self, v, correct):
-        result = False
-        isSure = True
-        if len(v) > 1 and v[-1] == '?':
-            isSure = False
-            v = v[:-1]
-        if len(v)>1 and v == correct:
-            return True, isSure
+promotionPath = dictPath[:dictPath.rindex('.')] + '.promotion'
+
+promotion = {}
+if os.path.exists(promotionPath):
+    with open(promotionPath) as promotion_file:
+        promotionReader = csv.reader(promotion_file, delimiter=';')
+        for l in promotionReader:
+            promotion[l[0]] = l[1]
+            if int(l[1]) < level:
+                level = int(l[1])
+        if promotionReader.line_num == 0:
+            level = 0
+
+with open(dictPath) as json_file:
+    words = json.load(json_file)
+
+successList = []
+
+totalWords = len(words) - 1
+wordsKeys = list(words.keys())
+continues = 1
+isOneTimeRepeat = False
+wordIndex = 0
+level_min = 9999
+
+print(f'Level:\033[33m{level_min}\033[0m')
+print('-------------')
+while(continues):
+    word = wordsKeys[wordIndex]
+    isSuccess = True
+    isSure = True
+    #if word != "" and not word in successList:
+    if word != "":
+
+        promotion_succes = 0
+        if not word in promotion:
+            promotion[word] = 0# 0 успешных
         else:
-            return False, isSure
+            promotion_succes = int(promotion[word])
 
-Verb = IVerbs()
-Verb.guess()
+        if promotion_succes <= level+1:
+            print(f'\n{word} ({promotion_succes}):')
+            for k in words[word].keys():
+                inputWorld = __input(f'  {k}:')
+                isCorrect,isSure_ = check(inputWorld, words[word][k])
+                if isCorrect:
+                    print('\033[92m ok\033[0m')
+                else:
+                    print('\033[91m x\033[0m')
+                    isSuccess = False
+                isSure = (isSure_ if isSure else False)
+
+            if isSuccess == False:
+                for k in words[word].keys():
+                    print('\033[33m--->>>\033[0m: ', end='')
+                    print(words[word][k])
+                isOneTimeRepeat = True
+                promotion_succes -= 1
+                if promotion_succes < 0:
+                    promotion_succes = 0
+                promotion[word] = promotion_succes
+            else:
+                if isSure and isOneTimeRepeat == False:
+                    successList.append(word)
+                    promotion_succes += 1
+                    promotion[word] = promotion_succes
+                isOneTimeRepeat = False
+
+            if promotion_succes < level_min:
+                level_min = promotion_succes
+
+    if isOneTimeRepeat == False:
+        wordIndex += 1
+        if wordIndex > totalWords:
+            with open(promotionPath, 'w') as promotion_file:
+                for p in promotion:
+                    promotion_file.write(p + ';' + str(promotion[p]) + '\n')
+            wordIndex = 0
+            print('\n\033[92m======= CONGRATILUTIONS =======\033[0m')
+            print(f'Next level:\033[33m{level_min}\033[0m')
+            print('-------------')
+            level = level_min
+            level_min = 9999
+
+
+        # if len(successList) >= totalWords:
+            # print("")
+            # print("======== Congratulation! ========")
+            # print("And... Let's repeat it again =)")
+            # successList.clear()
+
+
+

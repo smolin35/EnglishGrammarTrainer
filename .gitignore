@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# files with progress in the study of the dictionary
+*.promotion
+
 # C extensions
 *.so
 
