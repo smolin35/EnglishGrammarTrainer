@@ -1,0 +1,15 @@
+{
+  "стоить":{
+	  "translation": "cost",
+	  "translation_2": "cost_2"
+  },
+  "тест":{
+	  "translation": "test",
+	  "translation_2": "test_2"
+  },
+  "":{
+	  "past": "",
+	  "participle": "",
+	  "translation": ""
+  }
+}  
