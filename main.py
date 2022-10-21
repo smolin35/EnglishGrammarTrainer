@@ -47,6 +47,8 @@ if os.path.exists(promotionPath):
                 level = int(l[1])
         if promotionReader.line_num == 0:
             level = 0
+else:
+    level = 0
 
 with open(dictPath) as json_file:
     words = json.load(json_file)
@@ -60,14 +62,14 @@ isOneTimeRepeat = False
 wordIndex = 0
 level_min = 9999
 
-print(f'Level:\033[33m{level_min}\033[0m')
+print(f'Level:\033[33m{level}\033[0m')
 print('-------------')
 while(continues):
     word = wordsKeys[wordIndex]
     isSuccess = True
     isSure = True
     #if word != "" and not word in successList:
-    if word != "":
+    if word != "" and word[0] != '_' and word[1] != '_':
 
         promotion_succes = 0
         if not word in promotion:
@@ -78,14 +80,24 @@ while(continues):
         if promotion_succes <= level+1:
             print(f'\n{word} ({promotion_succes}):')
             for k in words[word].keys():
-                inputWorld = __input(f'  {k}:')
-                isCorrect,isSure_ = check(inputWorld, words[word][k])
+                value = words[word][k]
+                inputWorld = ''
+                if type(value) == str:
+                    inputWorld = __input(f'  {k}:')
+                else: #Пременная - например тесты
+                    print(f'  {k}:')
+                    for v in words[value[0]][value[1]]:
+                        print(f'    {v}: {words[value[0]][value[1]][v]}')
+                    inputWorld = __input('    ОТВЕТ:')
+                    value = value[2]
+                isCorrect,isSure_ = check(inputWorld, value)
                 if isCorrect:
                     print('\033[92m ok\033[0m')
                 else:
                     print('\033[91m x\033[0m')
                     isSuccess = False
                 isSure = (isSure_ if isSure else False)
+
 
             if isSuccess == False:
                 for k in words[word].keys():

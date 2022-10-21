@@ -1,0 +1,152 @@
+{
+  "__TESTS":{
+	  "Использование времён":{
+		  "1": "Повторяющиеся действия",
+		  "2": "Никогда - тоже повтор",
+	      "3": "Общепринятые факты",
+		  "4": "Действие < момент времени > действие",
+		  "5": "Придаточное предложение: то что длиннее по времени. ---- Я принимал душ ----, когда мама пришла"
+	  }
+
+  },
+  "Past Simple Active":{
+	  "Форма": "I V2",
+	  "Употребление": ["__TESTS", "Использование времён", "1 2 3"]
+  },
+  "Present Simple Active":{
+	  "Форма": "I V",
+	  "3-е лицо": "He V+s",
+	  "Употребление": ["__TESTS", "Использование времён", "1 2 3"]
+  },
+  "Future Simple Active":{
+	  "Форма": "I shall/will V",
+	  "Употребление": ["__TESTS", "Использование времён", "1 2 3"]
+  },
+  "Future in the Past Simple Active":{
+	  "Форма": "I should/would V",
+	  "Употребление": ["__TESTS", "Использование времён", "1 2 3"]
+  },
+  "Past Continious Active":{
+	  "Форма": "I was Ving",
+	  "Употребление": ["__TESTS", "Использование времён", "4 5"]
+  },
+  "Present Continious Active":{
+	  "Форма": "I be Ving",
+	  "Употребление": ["__TESTS", "Использование времён", "4 5"]
+  },
+  "Future Continious Active":{
+	  "Форма": "I shall/will be Ving",
+	  "Употребление": ["__TESTS", "Использование времён", "4 5"]
+  },
+  "Future in the Past Continioust Active":{
+	  "Форма": "I should/would be Ving",
+	  "Употребление": ["__TESTS", "Использование времён", "4 5"]
+  },
+  "Past Perfect Active":{
+	  "Форма": "I had V3"
+  },
+  "Present Perfect Active":{
+	  "Форма": "I have V3"
+  },
+  "Future Perfect Active":{
+	  "Форма": "I shall/will have V3"
+  },
+  "Future in the Past Perfect Active":{
+	  "Форма": "I should/would have V3"
+  },
+  "Past Perfect Continious Active":{
+	  "Форма": "I had been Ving"
+  },
+  "Present Perfect Continious Active":{
+	  "Форма": "I have been Ving"
+  },
+  "Future Perfect Continious Active":{
+	  "Форма": "I shall/will have been Ving"
+  },
+  "Future in the Past Perfect Continious Active":{
+	  "Форма": "I should/would have been Ving"
+  },
+  "Past Simple Passive":{
+  },
+  "Present Simple Passive":{
+  },
+  "Future Simple Passive":{
+  },
+  "Future in the Past Simple Passive":{
+  },
+  "Past Continious Passive":{
+  },
+  "Present Continious Passive":{
+  },
+  "Future Continious Passive":{
+  },
+  "Future in the Past Continioust Passive":{
+  },
+  "Past Perfect Passive":{
+  },
+  "Present Perfect Passive":{
+  },
+  "Future Perfect Passive":{
+  },
+  "Future in the Past Perfect Passive":{
+  },
+  "Past Perfect Continious Passive":{
+  },
+  "Present Perfect Continious Passive":{
+  },
+  "Future Perfect Continious Passive":{
+  },
+  "Future in the Past Perfect Continious Passive":{
+  },
+  "объяснять":{
+	  "translation": "account for"
+  },
+  "называться":{
+	  "translation": "refer to as"
+  },
+  "договориться, условиться":{
+	  "translation": "agree on (upon)"
+  },
+  "приходить к (заключению, решению)":{
+	  "translation": "arrive at" 
+  },
+  "вызывать":{
+	  "translation": "bring about"
+  },
+  "комментировать":{
+	  "translation": "comment on (upon)"
+  },
+  "рассматривать, заниматься, касаться":{
+	  "translation": "deal with"
+  },
+  "настаивать на":{
+	  "translation": "insist on (upon)"
+  },
+  "слушать":{
+	  "translation": "listen to"
+  },
+  "ссылаться на, упоминать о, отсылать, находить":{
+	  "translation": "refer to" 
+  },
+  "полагаться на":{
+	  "translation": "relay on"
+  },
+  "говорить о":{
+	  "translation": "speak about"
+  },
+  "подвергать (действию)":{
+	  "translation": "subject to" 
+  },
+  "заменять первое вторым":{
+	  "translation": "substitute by"
+  },
+  "заменять второе первым":{
+	  "translation": "substitute for"
+  }, 
+  "затрагивать, касаться":{
+	  "translation": "touch on (upon)"
+  },
+  "___FOR___ a more details ... the reader is >>> НАХОДИТЬ <<< the next chapter":{
+	  "translation": "refer to"
+  }
+}  
