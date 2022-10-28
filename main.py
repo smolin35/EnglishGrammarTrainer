@@ -64,6 +64,7 @@ level_min = 9999
 
 print(f'Level:\033[33m{level}\033[0m')
 print('-------------')
+promotion_cnt = __PROMOTION_NUM # когда дйдёт до нуля будет цикл по ранее успешно сданным
 while(continues):
     word = wordsKeys[wordIndex]
     isSuccess = True
@@ -77,7 +78,9 @@ while(continues):
         else:
             promotion_succes = int(promotion[word])
 
-        if promotion_succes <= level+1:
+        if promotion_cnt > 0 and promotion_succes <= level+1 or \
+           promotion_cnt <= 0 and promotion_succes > level+1:
+
             print(f'\n{word} ({promotion_succes}):')
             for k in words[word].keys():
                 value = words[word][k]
@@ -118,6 +121,8 @@ while(continues):
             if promotion_succes < level_min:
                 level_min = promotion_succes
 
+
+
     if isOneTimeRepeat == False:
         wordIndex += 1
         if wordIndex > totalWords:
@@ -130,6 +135,10 @@ while(continues):
             print('-------------')
             level = level_min
             level_min = 9999
+
+            if promotion_cnt <= 0:
+                promotion_cnt = __PROMOTION_NUM
+            promotion_cnt -= 1
 
 
         # if len(successList) >= totalWords:
