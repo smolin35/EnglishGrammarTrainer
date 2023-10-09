@@ -1,9 +1,13 @@
+#!/usr/bin/python3 
+
+
 import json
 import random
 import sys
 import os
 import numpy as np
 import csv
+import difflib
 
 __PROMOTION_NUM = 4
 
@@ -16,13 +20,20 @@ def __input(label):
 def check(v, correct):
     result = False
     isSure = True
-    if len(v) > 1 and v[-1] == '?':
+    if len(v) >= 1 and v[-1] == '?':
         isSure = False
         v = v[:-1]
-    if len(v)>1 and v == correct:
-        return True, isSure
+    ratio = similarity(v, correct)
+    if len(v)>=1 and ratio > 0.90:
+        return True, isSure, ratio
     else:
-        return False, isSure
+        return False, isSure, ratio
+
+def similarity(s1, s2): # Похожесть строк 
+    normalized1 = s1.lower()
+    normalized2 = s2.lower()
+    matcher = difflib.SequenceMatcher(None, normalized1, normalized2)
+    return matcher.ratio()
 
 
 #with open('dict/verbs_test.json') as json_file:
@@ -93,11 +104,11 @@ while(continues):
                         print(f'    {v}: {words[value[0]][value[1]][v]}')
                     inputWorld = __input('    ОТВЕТ:')
                     value = value[2]
-                isCorrect,isSure_ = check(inputWorld, value)
+                isCorrect,isSure_, ratio = check(inputWorld, value)
                 if isCorrect:
-                    print('\033[92m ok\033[0m')
+                    print(f'\033[92m ok\033[0m \033[33m{ratio:.2f}\033[0m')
                 else:
-                    print('\033[91m x\033[0m')
+                    print(f'\033[91m x\033[0m \033[33m{ratio:.2f}\033[0m')
                     isSuccess = False
                 isSure = (isSure_ if isSure else False)
 
@@ -123,12 +134,13 @@ while(continues):
 
 
 
+    with open(promotionPath, 'w') as promotion_file:
+        for p in promotion:
+            promotion_file.write(p + ';' + str(promotion[p]) + '\n')
+
     if isOneTimeRepeat == False:
         wordIndex += 1
         if wordIndex > totalWords:
-            with open(promotionPath, 'w') as promotion_file:
-                for p in promotion:
-                    promotion_file.write(p + ';' + str(promotion[p]) + '\n')
             wordIndex = 0
             print('\n\033[92m======= CONGRATILUTIONS =======\033[0m')
             print(f'Next level:\033[33m{level_min}\033[0m')
