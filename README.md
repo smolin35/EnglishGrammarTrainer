@@ -1,18 +1,11 @@
-# Irregular Verbs
+# EnglishGrammarTrainer
 
-Practice irregular verb with command lines with Python <3
+Based on [Jarvizx/IrregularVerbs](https://github.com/Jarvizx/IrregularVerbs)
 
-![iv.png](https://github.com/Jarvizx/IrregularVerbs/blob/master/iv.png?raw=true)
+Practice irregular verb and user's words with command line with Python > 3.6
 
 ## Usage
 
 ```
-$ python verbs.py
+$ python verbs.py dict.json
 ```
-
-## Notes 
-
-* It's 156 irregular verbs.
-* Feel free to send any feedback.
-* The result has the correct way of the verb in present, past, past participle and a simple translation to Spanish. 
-* Also, the result has a link of wordreference if you have some doubt.
