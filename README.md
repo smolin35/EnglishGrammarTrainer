@@ -7,5 +7,5 @@ Practice irregular verb and user's words with command line with Python > 3.6
 ## Usage
 
 ```
-$ python verbs.py dict.json
+$ python main.py dict.json
 ```
